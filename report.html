@@ -1,0 +1,86 @@
+
+    <html>
+    <head>
+        <title>Social Media Analysis Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 30px;
+                line-height: 1.6;
+            }
+            h1 {
+                text-align: center;
+                color: #333;
+            }
+            h2 {
+                color: #333;
+            }
+            .section {
+                margin-bottom: 30px;
+            }
+            .graph {
+                margin-top: 20px;
+                text-align: center;
+            }
+            .graph img {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Social Media Insights Report</h1>
+
+        <div class="section">
+            <h2>Report</h2>
+            <div><div>
+    <h2>1. Summary of Content, Observations and Trends</h2>
+    <p>Analysis of the Instagram data shows a varying degree of reach with top impressions recorded at 968, 1607, and 1024. The engagement rates observed were 0.105, 0.048, and 0.0896. It is evident that while impression numbers fluctuate, engagement levels provide insight into user interaction with content.</p>
+    <canvas id="reachEngagementGraph" width="600" height="400"></canvas>
+    <script>
+        // Replace with actual rendering code to generate the dynamic graph
+        const ctx = document.getElementById('reachEngagementGraph').getContext('2d');
+        const data = {
+            labels: ['Impressions', 'Engagement'],
+            datasets: [{
+                label: 'Top Data',
+                data: [968, 1607, 1024, 0.105, 0.048, 0.0896], // Dummy data
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        };
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+    <h2>2. Recommendations to Improve Social Media Engagement</h2>
+    <p>To increase reach and enhance engagement, consider diversifying content types and increasing posting frequency. Testing different formats such as Stories, Reels, and IGTV can attract varying audience segments. Engaging with followers through interactive polls and Q&As may also foster community involvement.</p>
+
+    <h2>3. Actionable Strategies Inspired by Top Influencers</h2>
+    <p>Inspired by top influencers like 'BBC Learning English', adopt a consistent branding strategy using similar caption styles and visual aesthetics. Collaborate with other content creators to tap into their followers. Analyzing the type of content that resonates most with your audience can also help tailor future posts.</p>
+
+    <h2>4. Ideas for Future Improvements</h2>
+    <p>Incorporate user-generated content to build a more inclusive brand image. Regularly monitor analytics and adapt strategies based on performance metrics. Hosting giveaways or challenges could encourage followers to engage and share your content, further extending reach.</p>
+
+    <h2>5. Conclusion</h2>
+    <p>Improving reach on social media requires continual adaptation and engagement with the audience. By implementing the above strategies and closely monitoring performance, there is significant potential for increased visibility and interaction with content on platforms like Instagram.</p>
+</div></div>
+        </div>
+
+        <div class="section">
+            <h2>Graphs</h2>
+            <div class="graph"><img src="graphs/impressions_vs_engagement.png" alt="Top Impressions and Engagement"></div>
+        </div>
+    </body>
+    </html>
+    

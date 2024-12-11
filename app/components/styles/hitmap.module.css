@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 1fr); /* 1 column for labels + 3 target fields */
+  align-items: center;
+  gap: 5px; /* Add a small gap between cells */
+  margin-bottom: 5px; /* Slight spacing between rows */
+}
+
+.header-row {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 1fr); /* Align with data rows */
+  align-items: center;
+  gap: 5px; /* Add a small gap between header cells */
+  margin-bottom: 10px; /* Slight space below header row */
+}
+
+.header {
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+  background-color: transparent; /* No background */
+  border: none; /* Remove border */
+}
+
+.label {
+  font-weight: bold;
+  text-align: right;
+  padding: 8px 12px; /* Slightly reduced padding */
+  background-color: transparent; /* No background */
+  border: none; /* Remove border */
+}
+
+.cell {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  background-color: #f9f9f9; /* Neutral background for empty cells */
+  transition: all 0.3s ease; /* Smooth hover effect */
+  margin: 0; /* No extra margin around the cell */
+  border: none; /* Remove border */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for separation */
+}
+
+.cellTransparent {
+  background-color: transparent; /* Transparent background */
+  border: none; /* Remove any borders */
+  pointer-events: none; /* Disable hover or interaction */
+}
+
+/* High, medium, and low positive correlations */
+.cell[data-correlation="high-positive"] {
+  background-color: rgba(51, 65, 85, 0.8); /* Dark blue */
+  color: #fff;
+}
+
+.cell[data-correlation="medium-positive"] {
+  background-color: rgba(0, 123, 255, 0.5); /* Medium blue */
+  color: #fff;
+}
+
+.cell[data-correlation="low-positive"] {
+  background-color: rgba(0, 123, 255, 0.2); /* Light blue */
+  color: #333;
+}
+
+/* High, medium, and low negative correlations */
+.cell[data-correlation="high-negative"] {
+  background-color: rgba(255, 0, 0, 0.8); /* Dark red */
+  color: #fff;
+}
+
+.cell[data-correlation="medium-negative"] {
+  background-color: rgba(255, 0, 0, 0.5); /* Medium red */
+  color: #fff;
+}
+
+.cell[data-correlation="low-negative"] {
+  background-color: rgba(255, 0, 0, 0.2); /* Light red */
+  color: #333;
+}
+
+/* Neutral state */
+.cell[data-correlation="neutral"] {
+  background-color: #f0f0f0; /* Very light gray for neutral correlation */
+  color: #333;
+}
